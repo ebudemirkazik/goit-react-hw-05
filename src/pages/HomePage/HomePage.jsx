@@ -2,6 +2,7 @@ import { fetchTrendingMovies } from "../../movie-api";
 import { useEffect, useState } from "react";
 
 import MovieList from "../../components/MovieList/MovieList";
+import styles from './HomePage.module.css';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -14,7 +15,7 @@ const HomePage = () => {
   }, []);
   return (
     <>
-      <h2>Trending Today</h2>
+      <h2 className="headerH2" >Trending Today</h2>
       <MovieList movies={movies} />
     </>
   );

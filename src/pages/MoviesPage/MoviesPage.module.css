@@ -6,6 +6,9 @@
 }
 .movieInput {
   padding: 5px;
+  background-color: aliceblue;
+  color: black;
+  font-weight: 600;
 }
 
 .searchBtn {
