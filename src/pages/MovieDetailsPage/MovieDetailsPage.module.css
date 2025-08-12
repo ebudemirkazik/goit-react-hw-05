@@ -29,3 +29,11 @@
 button {
   color: black;
 }
+
+h3, h4, p {
+  color: black;
+}
+
+li::marker {
+  color: gray;
+}

@@ -1,12 +1,64 @@
-.navLink {
-  text-decoration: underline;
-}
 .movieUl {
   padding-left: 35px;
+  list-style: none;
+  margin: 0;
 }
-.navLink:focus {
-  color: red;
+
+.movieUl li {
+  position: relative;
+  padding-left: 1.2rem;
 }
-.navLink:hover {
+
+.movieUl li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 0.35rem;
+  height: 0.35rem;
+  background-color: #d1d5db; 
+  border-radius: 50%;
+}
+
+.navLink {
+  position: relative;
+  display: inline-block;
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.5rem;
+  color: #1f2937;
+  font-weight: 500;
   text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0.4rem;
+  right: 0.4rem;
+  bottom: 0.15rem;
+  height: 2px;
+  background: linear-gradient(90deg, #f97316, #ec4899); 
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.18s ease-out;
+  border-radius: 2px;
+}
+
+.navLink:hover {
+  color: #f97316; 
+  background-color: rgba(249, 115, 22, 0.08);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.navLink:focus {
+  color: #ec4899; 
+  outline: none;
+}
+
+.navLink:visited {
+  color: #6b7280; 
 }

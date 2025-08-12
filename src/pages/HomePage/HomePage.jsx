@@ -15,7 +15,7 @@ const HomePage = () => {
   }, []);
   return (
     <>
-      <h2 className="headerH2" >Trending Today</h2>
+      <h2>Trending Today</h2>
       <MovieList movies={movies} />
     </>
   );
